@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Carrozados - RF</title>
+  </head>
+  <body>
+    <header class="primary-header flex">
+      <img src="./images/icons/camera.svg" alt="carrozados logo" class="logo" />
+
+      <button class="btn-contact">CONTACTANOS</button>
+
+      <button
+        class="btn-mobile-nav-toggle material-icons md-36"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        menu
+      </button>
+
+      <nav>
+        <ul
+          id="primary-navigation"
+          data-visible="false"
+          class="primary-navigation flex"
+        >
+          <li><a href="#home">INICIO</a></li>
+          <li><a href="#carrozados">CARROZADOS</a></li>
+          <li><a href="#accesorios">ACCESORIOS</a></li>
+          <li><a href="#nosotros">NOSOTROS</a></li>
+          <li><a href="#contacto">CONTACTO</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Inicio -->
+
+      <section id="home" class="section-home flex scroll-snap">
+        <div>LOGO</div>
+        <button id="btn__hero" class="flex">
+          CARROZADOS <span class="material-icons">expand_more</span>
+        </button>
+      </section>
+
+      <!-- Carrozados -->
+
+      <section id="carrozados" class="section-carrozados flex scroll-snap">
+        <h1 class="header-carrozados">CARROZADOS</h1>
+        <div class="card-container flex">
+          <div class="card">
+            <h2 class="card-header">CAMPERS</h2>
+            <p class="card-content">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit dignissim,
+              lacinia venenatis pulvinar at lobortis taciti purus.
+            </p>
+            <button id="btn-campers" class="btn__card">Ver más</button>
+          </div>
+          <div class="card">
+            <h2 class="card-header">MOTOR-HOME</h2>
+            <p class="card-content">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit dignissim,
+              lacinia venenatis pulvinar at lobortis taciti purus.
+            </p>
+            <button id="btn-motorhome" class="btn__card">Ver más</button>
+          </div>
+          <div class="card">
+            <h2 class="card-header">TALLER MÓVIL</h2>
+            <p class="card-content">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit dignissim,
+              lacinia venenatis pulvinar at lobortis taciti purus.
+            </p>
+            <button id="btn-taller" class="btn__card">Ver más</button>
+          </div>
+          <div class="card">
+            <h2 class="card-header">FOODTRUCK</h2>
+            <p class="card-content">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit dignissim,
+              lacinia venenatis pulvinar at lobortis taciti purus.
+            </p>
+            <button id="btn-remolques" class="btn__card">Ver más</button>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="accesorios"
+        class="section-accesorios flex scroll-snap"
+      ></section>
+      <section
+        id="nosotros"
+        class="section-nosotros flex scroll-snap"
+      ></section>
+      <section
+        id="contacto"
+        class="section-contacto flex scroll-snap"
+      ></section>
+    </main>
+
+    <footer class="footer">FOOTER</footer>
+
+    <script src="./main.js"></script>
+    <script src="./modal.js"></script>
+  </body>
+</html>

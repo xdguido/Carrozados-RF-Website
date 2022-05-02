@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* @link https://utopia.fyi/type/calculator?c=320,17.4,1.2,1140,18.4,1.25,3,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
+  --step--2: clamp(0.74rem, calc(0.76rem + -0.04vw), 0.76rem);
+  --step--1: clamp(0.91rem, calc(0.9rem + 0.03vw), 0.92rem);
+  --step-0: clamp(1.09rem, calc(1.06rem + 0.12vw), 1.15rem);
+  --step-1: clamp(1.31rem, calc(1.25rem + 0.26vw), 1.44rem);
+  --step-2: clamp(1.57rem, calc(1.48rem + 0.45vw), 1.8rem);
+  --step-3: clamp(1.88rem, calc(1.74rem + 0.72vw), 2.25rem);
+
+  --bg-clr-primary: hsl(0, 0%, 83%);
+  --bg-clr-secondary: hsl(0, 0%, 91%);
+  --clr-text: hsl(0, 0%, 94%);
+  --clr-primary: hsl(0, 0%, 8%);
+  --clr-secondary: hsl(0, 100%, 58%);
+  --clr-accent: ;
+
+  --ff-title: "Montserrat", sans-serif;
+  --ff-text: "Montserrat", sans-serif;
+}
+
+/* General */
+
+html {
+  font-family: var(--ff-text);
+  color: var(--clr-text);
+  font-size: var(--step-0);
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+}
+
+/* Buttons */
+
+button {
+  cursor: pointer;
+}
+
+.btn-mobile-nav-toggle.material-icons {
+  display: none;
+  font-size: 46px;
+  color: hsl(0, 0%, 83%);
+  position: absolute;
+  z-index: 9999;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 2.5rem;
+  border: 0;
+  top: 1.2rem;
+  right: 1.5rem;
+  width: 2rem;
+  aspect-ratio: 1;
+}
+
+#btn__hero {
+  padding: 0.5em 1em;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  align-items: center;
+}
+
+.btn-contact {
+  display: none;
+  padding: 0.4em 0.8em;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+
+/* Typography */
+
+/* Primary Header */
+
+.logo {
+}
+
+.primary-header {
+  position: fixed;
+  padding-inline: 2rem;
+  height: 5rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* Main Content */
+
+.section-home {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(../images/index.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-carrozados {
+  flex-direction: column;
+  color: var(--clr-primary);
+  padding-block: 5rem;
+  min-height: 100vh;
+}
+.header-carrozados {
+  padding-left: max(1rem, 6vw);
+}
+.card-container {
+  --gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  border: solid 1px rgb(58, 58, 58);
+  flex-basis: clamp(16rem, 22vw, 22rem);
+  height: clamp(16rem, 35vw, 35rem);
+}
+
+/* Carrozados Modal */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal__inner {
+  flex-direction: column;
+  background-color: var(--bg-clr-primary);
+  color: var(--clr-primary);
+  border-radius: 1rem;
+  padding: min(5vw, 2.5rem);
+  width: min(90vw, 70rem);
+  height: min(80vh, 40rem);
+}
+
+.modal__top {
+  justify-content: space-between;
+}
+
+.modal__content {
+  margin-block-end: min(5vw, 2rem);
+}
+
+.modal__bottom {
+  /* display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr; */
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.modal__card-container {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; */
+  border: 1px solid black;
+}
+
+.modal__card-image {
+}
+
+.modal__card-leyend {
+}
+
+/* Media Queries */
+
+@media (max-width: 800px) {
+  /* nav bar */
+
+  .primary-navigation {
+    position: fixed;
+    z-index: 1000;
+    inset: 5rem 0 0 35%;
+    padding: 3rem 1.5rem;
+    --gap: 2rem;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 300ms ease-in-out;
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+
+  .primary-navigation[data-visible="true"] {
+    transform: translateX(0%);
+  }
+
+  .btn-mobile-nav-toggle.material-icons {
+    display: block;
+  }
+
+  .btn-contact {
+    display: flex;
+  }
+
+  /* hero */
+
+  /* carrozados */
+
+  /* .card-container {
+    
+  }
+  .card {
+    
+  } */
+}
+
+/* Utility classes */
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.scroll-snap {
+  scroll-snap-align: start;
+}
