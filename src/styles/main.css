@@ -112,15 +112,15 @@ button {
   padding-block: 5rem;
   min-height: 100vh;
 }
-.header-carrozados {
+.carrozados-header {
   padding-left: max(1rem, 6vw);
 }
-.card-container {
+.carrozados-card-container {
   --gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
 }
-.card {
+.carrozados-card {
   flex-direction: column;
   justify-content: space-between;
   padding: 1.2rem;
@@ -131,7 +131,7 @@ button {
   background-repeat: no-repeat;
   background-position: center;
 }
-.card__bottom {
+.carrozados-card__bottom {
   flex-direction: column;
   align-items: end;
   --gap: 0.1rem;
@@ -142,19 +142,19 @@ button {
   color: var(--clr-secondary);
   background-color: var(--clr-bg-primary);
 }
-.card__bottom p {
+.carrozados-card__bottom p {
   border-bottom: solid 1px var(--clr-secondary);
 }
-.card.campers {
+.carrozados-card.campers {
   background-image: url(../images/carrozados/motor-home/motor-home-3.jpeg);
 }
-.card.motor-home {
+.carrozados-card.motor-home {
   background-image: url(../images/carrozados/motor-home/motor-home-3.jpeg);
 }
-.card.taller {
+.carrozados-card.taller {
   background-image: url(../images/carrozados/motor-home/motor-home-3.jpeg);
 }
-.card.foodtruck {
+.carrozados-card.foodtruck {
   background-image: url(../images/carrozados/motor-home/motor-home-3.jpeg);
 }
 
