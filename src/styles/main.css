@@ -10,12 +10,12 @@
   --step-2: clamp(1.57rem, calc(1.48rem + 0.45vw), 1.8rem);
   --step-3: clamp(1.88rem, calc(1.74rem + 0.72vw), 2.25rem);
 
-  --bg-clr-primary: hsl(0, 0%, 83%);
-  --bg-clr-secondary: hsl(0, 0%, 91%);
-  --clr-text: hsl(0, 0%, 94%);
-  --clr-primary: hsl(0, 0%, 8%);
-  --clr-secondary: hsl(0, 100%, 58%);
-  --clr-accent: ;
+  --clr-bg-primary: hsl(0, 0%, 100%, 0.55);
+  --clr-bg-secondary: hsl(0, 0%, 0%, 0.75);
+  --clr-text: hsl(0, 0%, 98%);
+  --clr-primary: hsl(0, 0%, 85%);
+  --clr-secondary: hsl(191, 92%, 5%);
+  --clr-accent: hsl(191, 92%, 24%);
 
   --ff-title: "Montserrat", sans-serif;
   --ff-text: "Montserrat", sans-serif;
@@ -25,10 +25,16 @@
 
 html {
   font-family: var(--ff-text);
-  color: var(--clr-text);
+  color: var(--clr-secondary);
   font-size: var(--step-0);
   scroll-snap-type: y proximity;
   scroll-behavior: smooth;
+}
+h1 {
+  font-size: var(--step-3);
+}
+h2 {
+  font-size: var(--step-1);
 }
 
 /* Buttons */
@@ -36,7 +42,6 @@ html {
 button {
   cursor: pointer;
 }
-
 .btn-mobile-nav-toggle.material-icons {
   display: none;
   font-size: 46px;
@@ -52,14 +57,17 @@ button {
   width: 2rem;
   aspect-ratio: 1;
 }
-
 #btn__hero {
   padding: 0.5em 1em;
   border-radius: 0.5rem;
   font-weight: 500;
   align-items: center;
 }
-
+.btn__card {
+  font-size: var(--step--1);
+  background-color: transparent;
+  border-style: none;
+}
 .btn-contact {
   display: none;
   padding: 0.4em 0.8em;
@@ -77,13 +85,14 @@ button {
 .primary-header {
   position: fixed;
   padding-inline: 2rem;
+  border-bottom: 1px solid var(--clr-secondary);
   height: 5rem;
   top: 0;
   left: 0;
   right: 0;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: var(--clr-bg-primary);
 }
 
 /* Main Content */
@@ -100,7 +109,6 @@ button {
 
 .section-carrozados {
   flex-direction: column;
-  color: var(--clr-primary);
   padding-block: 5rem;
   min-height: 100vh;
 }
@@ -113,9 +121,28 @@ button {
   justify-content: center;
 }
 .card {
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.2rem;
   border: solid 1px rgb(58, 58, 58);
   flex-basis: clamp(16rem, 22vw, 22rem);
-  height: clamp(16rem, 35vw, 35rem);
+  height: clamp(19rem, 35vw, 35rem);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.card__bottom {
+  flex-direction: column;
+  align-items: end;
+  --gap: 0;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  font-size: var(--step--1);
+  color: var(--clr-secondary);
+  background-color: var(--clr-bg-primary);
+}
+.card.campers {
+  background-image: url(../images/carrozados/motor-home/motor-home-3.jpeg);
 }
 
 /* Carrozados Modal */
@@ -134,8 +161,8 @@ button {
 
 .modal__inner {
   flex-direction: column;
-  background-color: var(--bg-clr-primary);
-  color: var(--clr-primary);
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
   border-radius: 1rem;
   padding: min(5vw, 2.5rem);
   width: min(90vw, 70rem);
@@ -168,6 +195,16 @@ button {
 }
 
 .modal__card-leyend {
+}
+
+/* Support */
+
+@supports (backdrop-filter: blur(18px)) {
+  .card__bottom,
+  .primary-header {
+    background-color: var(--clr-bg-primary);
+    backdrop-filter: blur(18px);
+  }
 }
 
 /* Media Queries */
