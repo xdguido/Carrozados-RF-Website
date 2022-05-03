@@ -41,6 +41,7 @@ h2 {
 
 button {
   cursor: pointer;
+  color: inherit;
 }
 .btn-mobile-nav-toggle.material-icons {
   display: none;
@@ -65,8 +66,10 @@ button {
 }
 .btn__card {
   font-size: var(--step--1);
-  background-color: transparent;
+  color: var(--clr-primary);
+  background-color: var(--clr-accent);
   border-style: none;
+  border-radius: 4px;
 }
 .btn-contact {
   display: none;
@@ -75,12 +78,7 @@ button {
   font-weight: 500;
 }
 
-/* Typography */
-
 /* Primary Header */
-
-.logo {
-}
 
 .primary-header {
   position: fixed;
@@ -95,7 +93,7 @@ button {
   background-color: var(--clr-bg-primary);
 }
 
-/* Main Content */
+/* Hero Section */
 
 .section-home {
   flex-direction: column;
@@ -106,6 +104,8 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/* Carrozados Section */
 
 .section-carrozados {
   flex-direction: column;
@@ -124,7 +124,7 @@ button {
   flex-direction: column;
   justify-content: space-between;
   padding: 1.2rem;
-  border: solid 1px rgb(58, 58, 58);
+  border: solid 1px var(--clr-secondary);
   flex-basis: clamp(16rem, 22vw, 22rem);
   height: clamp(19rem, 35vw, 35rem);
   background-size: cover;
@@ -134,14 +134,27 @@ button {
 .card__bottom {
   flex-direction: column;
   align-items: end;
-  --gap: 0;
+  --gap: 0.1rem;
   padding: 0.5rem;
   border-radius: 0.2rem;
+
   font-size: var(--step--1);
   color: var(--clr-secondary);
   background-color: var(--clr-bg-primary);
 }
+.card__bottom p {
+  border-bottom: solid 1px var(--clr-secondary);
+}
 .card.campers {
+  background-image: url(../images/carrozados/motor-home/motor-home-3.jpeg);
+}
+.card.motor-home {
+  background-image: url(../images/carrozados/motor-home/motor-home-3.jpeg);
+}
+.card.taller {
+  background-image: url(../images/carrozados/motor-home/motor-home-3.jpeg);
+}
+.card.foodtruck {
   background-image: url(../images/carrozados/motor-home/motor-home-3.jpeg);
 }
 
@@ -158,7 +171,6 @@ button {
   justify-content: center;
   background: rgba(0, 0, 0, 0.5);
 }
-
 .modal__inner {
   flex-direction: column;
   background-color: var(--clr-primary);
@@ -168,15 +180,12 @@ button {
   width: min(90vw, 70rem);
   height: min(80vh, 40rem);
 }
-
 .modal__top {
   justify-content: space-between;
 }
-
 .modal__content {
   margin-block-end: min(5vw, 2rem);
 }
-
 .modal__bottom {
   /* display: grid;
   gap: 1rem;
@@ -184,34 +193,30 @@ button {
   overflow-y: scroll;
   overflow-x: hidden;
 }
-
 .modal__card-container {
   /* display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr; */
   border: 1px solid black;
 }
-
 .modal__card-image {
 }
-
 .modal__card-leyend {
 }
 
 /* Support */
 
-@supports (backdrop-filter: blur(18px)) {
+/* @supports (backdrop-filter: blur(18px)) {
   .card__bottom,
   .primary-header {
     background-color: var(--clr-bg-primary);
     backdrop-filter: blur(18px);
   }
-}
+} */
 
 /* Media Queries */
 
 @media (max-width: 800px) {
   /* nav bar */
-
   .primary-navigation {
     position: fixed;
     z-index: 1000;
@@ -221,9 +226,13 @@ button {
     flex-direction: column;
     transform: translateX(100%);
     transition: transform 300ms ease-in-out;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: var(--clr-bg-primary);
   }
-
+  /* @supports (backdrop-filter: blur(18px)) {
+    .primary-navigation {
+      backdrop-filter: blur(18px);
+    }
+  } */
   .primary-navigation[data-visible="true"] {
     transform: translateX(0%);
   }
