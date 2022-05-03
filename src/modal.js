@@ -10,8 +10,8 @@ const showModal = (titleHtml, contentHtml, images) => {
         <div class="modal__inner flex">
             <div class="modal__top flex">
                 <h2 class="modal__title">${titleHtml}</h2>
-                <button class="modal__close" type="button">
-                    <span class="material-icons">close</span>
+                <button class="modal__close material-icons md-36" type="button">
+                    close
                 </button>
             </div>
             <div class="modal__content">${contentHtml}</div>

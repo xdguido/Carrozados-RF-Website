@@ -13,9 +13,11 @@
   --clr-bg-primary: hsl(0, 0%, 100%, 0.55);
   --clr-bg-secondary: hsl(0, 0%, 0%, 0.75);
   --clr-text: hsl(0, 0%, 98%);
-  --clr-primary: hsl(0, 0%, 85%);
+  --clr-primary: hsl(0, 0%, 90%);
   --clr-secondary: hsl(191, 92%, 5%);
   --clr-accent: hsl(191, 92%, 24%);
+
+  --box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
 
   --ff-title: "Montserrat", sans-serif;
   --ff-text: "Montserrat", sans-serif;
@@ -29,6 +31,12 @@ html {
   font-size: var(--step-0);
   scroll-snap-type: y proximity;
   scroll-behavior: smooth;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--ff-title);
 }
 h1 {
   font-size: var(--step-3);
@@ -45,8 +53,8 @@ button {
 }
 .btn-mobile-nav-toggle.material-icons {
   display: none;
-  font-size: 46px;
-  color: hsl(0, 0%, 83%);
+  font-size: 43px;
+  color: var(--clr-secondary);
   position: absolute;
   z-index: 9999;
   background-color: transparent;
@@ -58,11 +66,22 @@ button {
   width: 2rem;
   aspect-ratio: 1;
 }
-#btn__hero {
-  padding: 0.5em 1em;
-  border-radius: 0.5rem;
-  font-weight: 500;
+.btn__hero,
+.btn-contact {
   align-items: center;
+  border-radius: 2rem;
+  border-style: none;
+  font-weight: 500;
+  color: var(--clr-text);
+  background-color: var(--clr-accent);
+  --gap: 0.5rem;
+}
+.btn__hero {
+  padding: 0.5em 1em;
+}
+.btn-contact {
+  display: none;
+  padding: 0.4em 0.8em;
 }
 .btn__card {
   font-size: var(--step--1);
@@ -71,11 +90,13 @@ button {
   border-style: none;
   border-radius: 4px;
 }
-.btn-contact {
-  display: none;
-  padding: 0.4em 0.8em;
-  border-radius: 0.5rem;
-  font-weight: 500;
+.modal__close {
+  background-color: transparent;
+  border-style: none;
+  font-size: 25px;
+}
+.modal__close.material-icons {
+  font-size: 40px;
 }
 
 /* Primary Header */
@@ -90,7 +111,7 @@ button {
   right: 0;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--clr-bg-primary);
+  background-color: var(--clr-primary);
 }
 
 /* Hero Section */
@@ -100,9 +121,9 @@ button {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-image: url(../images/index.jpg);
+  /* background-image: url(../images/index.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
 
 /* Carrozados Section */
@@ -124,9 +145,9 @@ button {
   flex-direction: column;
   justify-content: space-between;
   padding: 1.2rem;
-  border: solid 1px var(--clr-secondary);
   flex-basis: clamp(16rem, 22vw, 22rem);
   height: clamp(19rem, 35vw, 35rem);
+  box-shadow: var(--box-shadow);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -134,7 +155,7 @@ button {
 .carrozados-card__bottom {
   flex-direction: column;
   align-items: end;
-  --gap: 0.1rem;
+  --gap: 0.2rem;
   padding: 0.5rem;
   border-radius: 0.2rem;
 
@@ -143,7 +164,7 @@ button {
   background-color: var(--clr-bg-primary);
 }
 .carrozados-card__bottom p {
-  border-bottom: solid 1px var(--clr-secondary);
+  border-bottom: solid 1px var(--clr-accent);
 }
 .carrozados-card.campers {
   background-image: url(../images/carrozados/motor-home/motor-home-3.jpeg);
@@ -221,26 +242,33 @@ button {
   flex-direction: column;
   padding-block: 5rem;
   min-height: 100vh;
-  padding-inline: max(1rem, 6vw);
+}
+.header-contacto {
+  padding-left: max(1rem, 6vw);
 }
 .contacto-container {
+  justify-content: center;
 }
 .contacto__content {
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  max-width: 26rem;
+  box-shadow: var(--box-shadow);
+}
+.contacto__top {
+  flex-direction: column;
 }
 .iframe-googlemaps {
   width: clamp(18rem, 50vw, 45rem);
   height: clamp(20rem, 50vw, 30rem);
+  box-shadow: var(--box-shadow);
 }
 .contacto__form-container {
   flex-direction: column;
 }
 .contacto__form {
   flex-direction: column;
-  padding: 1rem;
-  font-size: var(--step--2);
-  border: solid 1px var(--clr-secondary);
 }
 .contacto__form > div {
   display: flex;
@@ -260,7 +288,7 @@ button {
 
 /* Media Queries */
 
-@media (max-width: 800px) {
+@media (max-width: 810px) {
   /* nav bar */
   .primary-navigation {
     position: fixed;
@@ -271,7 +299,7 @@ button {
     flex-direction: column;
     transform: translateX(100%);
     transition: transform 300ms ease-in-out;
-    background-color: var(--clr-bg-primary);
+    background-color: var(--clr-primary);
   }
   /* @supports (backdrop-filter: blur(18px)) {
     .primary-navigation {
@@ -293,6 +321,9 @@ button {
   .contacto-container {
     flex-direction: column;
     align-items: center;
+  }
+  .contacto__form {
+    font-size: var(--step--1);
   }
 }
 

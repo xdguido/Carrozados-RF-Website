@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,9 +14,19 @@
   </head>
   <body>
     <header class="primary-header flex">
-      <img src="./images/icons/camera.svg" alt="carrozados logo" class="logo" />
+      <img
+        src="./images/icons/camera.svg"
+        alt="carrozados logo"
+        class="logo"
+        onclick="window.location.href='#home';"
+      />
 
-      <button class="btn-contact">CONTACTANOS</button>
+      <button
+        onclick="window.location.href='#contacto';"
+        class="btn-contact flex"
+      >
+        CONTACTANOS <span class="material-icons">phone</span>
+      </button>
 
       <button
         class="btn-mobile-nav-toggle material-icons md-36"
@@ -42,10 +52,13 @@
     </header>
 
     <main>
-      <!-- Inicio -->
+      <!-- Hero -->
       <section id="home" class="section-home flex scroll-snap">
         <div>LOGO</div>
-        <button id="btn__hero" class="flex">
+        <button
+          class="btn__hero flex"
+          onclick="window.location.href='#carrozados';"
+        >
           CARROZADOS <span class="material-icons">expand_more</span>
         </button>
       </section>
@@ -147,11 +160,13 @@
         <h1 class="header-contacto">CONTACTO</h1>
         <div class="contacto-container flex">
           <div class="contacto__content flex">
-            <p class="contacto__leyend">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit dignissim,
-              lacinia venenatis pulvinar at lobortis taciti purus.
-            </p>
-            <button class="btn-whatsapp">WhatsApp</button>
+            <div class="contacto__top flex">
+              <p class="contacto__leyend">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit
+                dignissim, lacinia venenatis pulvinar at lobortis taciti purus.
+              </p>
+              <button class="btn-whatsapp">WhatsApp</button>
+            </div>
             <div class="contacto__form-container flex">
               <span class="material-icons"></span>
               <form
@@ -160,10 +175,10 @@
                 class="contacto__form flex"
               >
                 <div>
-                  <label for="name">Nombre</label>
+                  <label for="nombre">Nombre</label>
                   <input
-                    name="name"
-                    id="name"
+                    name="nombre"
+                    id="nombre"
                     type="text"
                     placeholder=""
                     size="22"
@@ -182,20 +197,13 @@
                   />
                 </div>
                 <div>
-                  <label for="text">Mensaje</label
+                  <label for="mensaje">Mensaje</label
                   ><textarea
-                    id="text"
-                    name="text"
+                    id="mensaje"
+                    name="mensaje"
                     rows="3"
-                    cols="22"
+                    cols="21"
                   ></textarea>
-                  <!-- <input
-                    type="text"
-                    name="text"
-                    id="text"
-                    placeholder=""
-                    required
-                  /> -->
                 </div>
                 <button type="submit">Enviar</button>
               </form>
