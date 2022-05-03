@@ -43,7 +43,6 @@
 
     <main>
       <!-- Inicio -->
-
       <section id="home" class="section-home flex scroll-snap">
         <div>LOGO</div>
         <button id="btn__hero" class="flex">
@@ -52,7 +51,6 @@
       </section>
 
       <!-- Carrozados -->
-
       <section id="carrozados" class="section-carrozados flex scroll-snap">
         <h1 class="carrozados-header">CARROZADOS</h1>
 
@@ -111,17 +109,109 @@
         </div>
       </section>
 
+      <!-- Accesorios -->
       <section id="accesorios" class="section-accesorios flex scroll-snap">
         <h1 class="header-accesorios">ACCESORIOS</h1>
+        <div class="accesorios-card-container flex">
+          <div class="accesorios-card flex">
+            <div class="accesorios-card__top"></div>
+            <div class="accesorios-card__bottom">
+              <p class="accesorios-card__leyend">Protección Anti-Lluvia</p>
+            </div>
+          </div>
+          <div class="accesorios-card flex">
+            <div class="accesorios-card__top"></div>
+            <div class="accesorios-card__bottom">
+              <p class="accesorios-card__leyend">Protección Anti-Lluvia</p>
+            </div>
+          </div>
+          <div class="accesorios-card flex">
+            <div class="accesorios-card__top"></div>
+            <div class="accesorios-card__bottom">
+              <p class="accesorios-card__leyend">Protección Anti-Lluvia</p>
+            </div>
+          </div>
+          <div class="accesorios-card flex">
+            <div class="accesorios-card__top"></div>
+            <div class="accesorios-card__bottom">
+              <p class="accesorios-card__leyend">Protección Anti-Lluvia</p>
+            </div>
+          </div>
+        </div>
       </section>
-      <section
-        id="nosotros"
-        class="section-nosotros flex scroll-snap"
-      ></section>
-      <section
-        id="contacto"
-        class="section-contacto flex scroll-snap"
-      ></section>
+
+      <section id="nosotros" class="section-nosotros flex"></section>
+
+      <!-- Contacto -->
+      <section id="contacto" class="section-contacto flex scroll-snap">
+        <h1 class="header-contacto">CONTACTO</h1>
+        <div class="contacto-container flex">
+          <div class="contacto__content flex">
+            <p class="contacto__leyend">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit dignissim,
+              lacinia venenatis pulvinar at lobortis taciti purus.
+            </p>
+            <button class="btn-whatsapp">WhatsApp</button>
+            <div class="contacto__form-container flex">
+              <span class="material-icons"></span>
+              <form
+                action="https://formsubmit.co/3c9fe8d00267cb374c86c3baa7888b6a"
+                method="post"
+                class="contacto__form flex"
+              >
+                <div>
+                  <label for="name">Nombre</label>
+                  <input
+                    name="name"
+                    id="name"
+                    type="text"
+                    placeholder=""
+                    size="22"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="email">E-mail</label
+                  ><input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder=""
+                    size="22"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="text">Mensaje</label
+                  ><textarea
+                    id="text"
+                    name="text"
+                    rows="3"
+                    cols="22"
+                  ></textarea>
+                  <!-- <input
+                    type="text"
+                    name="text"
+                    id="text"
+                    placeholder=""
+                    required
+                  /> -->
+                </div>
+                <button type="submit">Enviar</button>
+              </form>
+            </div>
+          </div>
+
+          <iframe
+            class="iframe-googlemaps"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d68199.38930244093!2d-68.1003129889899!3d-38.96207142095368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a319c60c354a7%3A0xb454f3318c632e17!2sCarrozados%20rf!5e0!3m2!1ses-419!2sar!4v1651584831508!5m2!1ses-419!2sar"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">FOOTER</footer>

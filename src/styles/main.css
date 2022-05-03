@@ -203,6 +203,51 @@ button {
 .modal__card-leyend {
 }
 
+/* Accesorios Section */
+
+.section-accesorios {
+  flex-direction: column;
+  padding-block: 5rem;
+  min-height: 100vh;
+}
+.accesorios-card-container {
+}
+.accesorios-card {
+}
+
+/* Contacto Section */
+
+.section-contacto {
+  flex-direction: column;
+  padding-block: 5rem;
+  min-height: 100vh;
+  padding-inline: max(1rem, 6vw);
+}
+.contacto-container {
+}
+.contacto__content {
+  flex-direction: column;
+  align-items: center;
+}
+.iframe-googlemaps {
+  width: clamp(18rem, 50vw, 45rem);
+  height: clamp(20rem, 50vw, 30rem);
+}
+.contacto__form-container {
+  flex-direction: column;
+}
+.contacto__form {
+  flex-direction: column;
+  padding: 1rem;
+  font-size: var(--step--2);
+  border: solid 1px var(--clr-secondary);
+}
+.contacto__form > div {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
 /* Support */
 
 /* @supports (backdrop-filter: blur(18px)) {
@@ -236,25 +281,19 @@ button {
   .primary-navigation[data-visible="true"] {
     transform: translateX(0%);
   }
-
   .btn-mobile-nav-toggle.material-icons {
     display: block;
   }
-
   .btn-contact {
     display: flex;
   }
-
   /* hero */
-
   /* carrozados */
-
-  /* .card-container {
-    
+  /* contacto */
+  .contacto-container {
+    flex-direction: column;
+    align-items: center;
   }
-  .card {
-    
-  } */
 }
 
 /* Utility classes */
