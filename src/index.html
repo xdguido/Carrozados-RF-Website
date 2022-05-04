@@ -21,10 +21,7 @@
         onclick="window.location.href='#home';"
       />
 
-      <button
-        onclick="window.location.href='#contacto';"
-        class="btn-contact flex"
-      >
+      <button onclick="window.location.href='#contacto';" class="btn-contact">
         CONTACTANOS <span class="material-icons">phone</span>
       </button>
 
@@ -162,20 +159,21 @@
           <div class="contacto__content flex">
             <div class="contacto__top flex">
               <p class="contacto__leyend">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit
-                dignissim, lacinia venenatis pulvinar at lobortis taciti purus.
+                Horarios de atención:</br><em>Lunes a Sábados - 8:00hs a 18:00hs</em>
               </p>
-              <button class="btn-whatsapp">WhatsApp</button>
+              <p class="contacto__leyend">Teléfono:</br><em>+54-299-4205131</em></p>
+              <button class="btn-whatsapp flex">
+                WhatsApp <span class="material-icons">whatsapp</span>
+              </button>
             </div>
             <div class="contacto__form-container flex">
-              <span class="material-icons"></span>
               <form
                 action="https://formsubmit.co/3c9fe8d00267cb374c86c3baa7888b6a"
                 method="post"
                 class="contacto__form flex"
               >
                 <div>
-                  <label for="nombre">Nombre</label>
+                  <label for="nombre">Nombre:</label>
                   <input
                     name="nombre"
                     id="nombre"
@@ -186,7 +184,7 @@
                   />
                 </div>
                 <div>
-                  <label for="email">E-mail</label
+                  <label for="email">Correo electrónico:</label
                   ><input
                     type="email"
                     name="email"
@@ -197,15 +195,17 @@
                   />
                 </div>
                 <div>
-                  <label for="mensaje">Mensaje</label
+                  <label for="mensaje">Mensaje:</label
                   ><textarea
                     id="mensaje"
                     name="mensaje"
                     rows="3"
-                    cols="21"
+                    cols="20"
                   ></textarea>
                 </div>
-                <button type="submit">Enviar</button>
+                <button class="btn__form flex" type="submit">
+                  Enviar <span class="material-icons">send</span>
+                </button>
               </form>
             </div>
           </div>

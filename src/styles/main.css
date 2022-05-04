@@ -74,10 +74,10 @@ button {
   font-weight: 500;
   color: var(--clr-text);
   background-color: var(--clr-accent);
-  --gap: 0.5rem;
 }
 .btn__hero {
   padding: 0.5em 1em;
+  --gap: 0.5rem;
 }
 .btn-contact {
   display: none;
@@ -97,6 +97,19 @@ button {
 }
 .modal__close.material-icons {
   font-size: 40px;
+}
+.btn__form,
+.btn-whatsapp {
+  padding: 0.3em 0.8em;
+  border: solid 1.2px var(--clr-accent);
+  border-radius: 1rem;
+  /* font-size: var(--step--2); */
+  color: var(--clr-accent);
+  background-color: var(--clr-text);
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+  --gap: 0.5rem;
 }
 
 /* Primary Header */
@@ -248,31 +261,37 @@ button {
 }
 .contacto-container {
   justify-content: center;
+  font-size: var(--step--1);
 }
 .contacto__content {
   flex-direction: column;
   justify-content: space-between;
-  padding: 1rem;
+  padding: clamp(1rem, 2vw, 2rem);
   max-width: 26rem;
   box-shadow: var(--box-shadow);
 }
-.contacto__top {
+.contacto__top,
+.contacto__form-container {
   flex-direction: column;
+  padding-bottom: 0.5rem;
+  border-bottom: solid 1.2px var(--clr-accent);
+}
+.contacto__top {
+  --gap: 0.5rem;
 }
 .iframe-googlemaps {
   width: clamp(18rem, 50vw, 45rem);
   height: clamp(20rem, 50vw, 30rem);
   box-shadow: var(--box-shadow);
 }
-.contacto__form-container {
-  flex-direction: column;
-}
 .contacto__form {
   flex-direction: column;
+  --gap: 0.5rem;
 }
 .contacto__form > div {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.1rem;
   justify-content: space-between;
 }
 
@@ -314,6 +333,8 @@ button {
   }
   .btn-contact {
     display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
   /* hero */
   /* carrozados */
@@ -321,9 +342,6 @@ button {
   .contacto-container {
     flex-direction: column;
     align-items: center;
-  }
-  .contacto__form {
-    font-size: var(--step--1);
   }
 }
 
