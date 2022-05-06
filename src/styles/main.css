@@ -13,8 +13,8 @@
   --clr-bg-primary: hsl(0, 0%, 100%, 0.55);
   --clr-bg-secondary: hsl(0, 0%, 0%, 0.75);
   --clr-text: hsl(0, 0%, 98%);
-  --clr-primary: hsl(0, 0%, 90%);
-  --clr-secondary: hsl(191, 92%, 4%);
+  --clr-primary: hsl(0, 0%, 92%);
+  --clr-secondary: hsl(191, 92%, 5%);
   --clr-accent: hsl(191, 92%, 24%);
 
   --box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
@@ -121,6 +121,7 @@ button {
 /* Primary Header */
 
 .primary-header {
+  z-index: 10;
   position: fixed;
   padding-inline: 2rem;
   border-bottom: 1px solid var(--clr-secondary);
@@ -138,11 +139,91 @@ button {
 .section-home {
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding-block: 5rem;
   height: 100vh;
   /* background-image: url(../images/index.jpg);
   background-repeat: no-repeat;
   background-size: cover; */
+}
+/* Hero Carousel */
+/* .carousel-container {
+  height: 30vw;
+  width: 50vw;
+  margin-inline: auto;
+}
+.carousel {
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  border: solid 1px var(--clr-accent);
+  overflow: hidden;
+}
+.slider {
+  
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  --gap: 0;
+  height: 100%;
+  width: 600%;
+  transition: transform 400ms;
+}
+.slider section {
+  flex-basis: 50vw;
+  border: solid 1px black;
+  flex-shrink: 0;
+  flex: 1;
+}
+.arrow {
+  cursor: pointer;
+  z-index: 999;
+} */
+.carousel-container {
+  width: clamp(18rem, 60vw, 60rem);
+  height: clamp(13rem, 50vh, 45rem);
+  margin: 20px auto;
+}
+.carousel {
+  background: #fff;
+  border: 2px solid var(--clr-accent);
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+}
+.slider {
+  height: 100%;
+  width: 500%;
+  flex-shrink: 0;
+  transition: transform 500ms ease-in-out;
+}
+.slider > section {
+  flex-basis: 20%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.controls button.next {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: none;
+  border: none;
+  outline: none;
+}
+.controls button.prev {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  background: none;
+  border: none;
+  outline: none;
+}
+.controls button i {
+  font-size: 50px;
 }
 
 /* Carrozados Section */
@@ -209,6 +290,12 @@ button {
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.5);
+}
+.modal {
+  z-index: 11;
+}
+.modal__lightbox {
+  z-index: 12;
 }
 .modal__inner {
   flex-direction: column;
@@ -320,7 +407,7 @@ button {
   /* nav bar */
   .primary-navigation {
     position: fixed;
-    z-index: 1000;
+    z-index: 10;
     inset: 5rem 0 0 35%;
     padding: 3rem 1.5rem;
     --gap: 2rem;

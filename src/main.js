@@ -28,6 +28,50 @@ navToggle.addEventListener("click", () => {
   }
 });
 
+// Hero Carousel.
+
+const carousel = document.querySelector(".carousel");
+const slider = document.querySelector(".slider");
+
+const next = document.querySelector(".next");
+const prev = document.querySelector(".prev");
+let direction;
+
+next.addEventListener("click", () => {
+  direction = -1;
+  carousel.style.justifyContent = "flex-start";
+  slider.style.transform = "translate(-20%)";
+});
+
+prev.addEventListener("click", () => {
+  if (direction === -1) {
+    direction = 1;
+    slider.appendChild(slider.firstElementChild);
+  }
+  carousel.style.justifyContent = "flex-end";
+  slider.style.transform = "translate(20%)";
+});
+
+slider.addEventListener(
+  "transitionend",
+  () => {
+    // get the last element and append it to the front
+
+    if (direction === 1) {
+      slider.prepend(slider.lastElementChild);
+    } else {
+      slider.appendChild(slider.firstElementChild);
+    }
+
+    slider.style.transition = "none";
+    slider.style.transform = "translate(0)";
+    setTimeout(() => {
+      slider.style.transition = "transform 500ms ease-in-out";
+    });
+  },
+  false
+);
+
 // Menu desplegable.
 
 // if (box.getBoundingClientRect().top < window.innerHeight)
