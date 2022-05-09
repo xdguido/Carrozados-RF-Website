@@ -1,4 +1,4 @@
-import { showModal } from "./modal";
+// import { showModal } from "./modal";
 
 // Mobile Nav Bar.
 
@@ -73,40 +73,6 @@ slider.addEventListener(
   },
   false
 );
-
-const btnCampers = document.querySelector("#btn-campers");
-const btnMotorhome = document.querySelector("#btn-motorhome");
-const btnTaller = document.querySelector("#btn-taller");
-const btnRemolques = document.querySelector("#btn-remolques");
-
-btnCampers.addEventListener("click", () => {
-  showModal("CAMPERS", "<p>Descripcion de los campers.</p>", [
-    {
-      leyend: "Camper 1",
-      src: "./images/carrozados/campers/camper.png",
-    },
-    {
-      leyend: "Camper 1",
-      src: "./images/carrozados/campers/camper.png",
-    },
-    {
-      leyend: "Camper 1",
-      src: "./images/carrozados/campers/camper.png",
-    },
-    {
-      leyend: "Camper 1",
-      src: "./images/carrozados/campers/camper.png",
-    },
-    {
-      leyend: "Camper 1",
-      src: "./images/carrozados/campers/camper.png",
-    },
-    {
-      leyend: "Camper 1",
-      src: "./images/carrozados/campers/camper.png",
-    },
-  ]);
-});
 
 // Menu desplegable.
 

@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./styles/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="./styles/main.css" />
+    <link rel="stylesheet" type="text/css" href="./src/styles/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./src/styles/main.css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -14,8 +14,9 @@
   </head>
   <body>
     <header class="primary-header flex">
+      <div class="left-header flex">
       <img
-        src="./images/icons/camera.svg"
+        src=".src/images/icons/camera.svg"
         alt="carrozados logo"
         class="logo"
         onclick="window.location.href='#home';"
@@ -24,7 +25,9 @@
       <button onclick="window.location.href='#contacto';" class="btn-contact">
         CONTACTANOS <span class="material-icons">phone</span>
       </button>
+      </div>
 
+      <div class="right-header">
       <button
         class="btn-mobile-nav-toggle material-icons md-36"
         aria-controls="primary-navigation"
@@ -46,6 +49,7 @@
           <li><a href="#contacto">CONTACTO</a></li>
         </ul>
       </nav>
+      </div>
     </header>
 
     <main>
@@ -245,7 +249,7 @@
 
     <footer class="footer">FOOTER</footer>
 
-    <script type="module" src="./main.js"></script>
-    <!-- <script src="./modal.js"></script> -->
+    <script src="./src/main.js"></script>
+    <script src="./src/modal.js"></script>
   </body>
 </html>

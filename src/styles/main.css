@@ -18,6 +18,7 @@
   --clr-accent: hsl(191, 92%, 24%);
 
   --box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+  --scroll-padding: 4.5rem;
 
   --ff-title: "Montserrat", sans-serif;
   --ff-text: "Montserrat", sans-serif;
@@ -31,6 +32,7 @@ html {
   font-size: var(--step-0);
   scroll-snap-type: y proximity;
   scroll-behavior: smooth;
+  /* overflow-x: hidden; */
 }
 body {
   overflow-y: scroll;
@@ -59,15 +61,12 @@ button {
   display: none;
   font-size: 43px;
   color: var(--clr-secondary);
-  position: absolute;
   z-index: 9999;
   background-color: transparent;
   background-repeat: no-repeat;
   background-size: 2.5rem;
   border: 0;
-  top: 1.2rem;
-  right: 1.5rem;
-  width: 2rem;
+  width: 2.7rem;
   aspect-ratio: 1;
 }
 .btn__hero,
@@ -86,6 +85,7 @@ button {
 .btn-contact {
   display: none;
   padding: 0.4em 0.8em;
+  font-size: var(--step--1);
 }
 .btn__card {
   font-size: var(--step--1);
@@ -125,10 +125,10 @@ button {
   position: fixed;
   padding-inline: 2rem;
   border-bottom: 1px solid var(--clr-secondary);
-  height: 5rem;
+  height: var(--scroll-padding);
+  width: 100vw;
   top: 0;
   left: 0;
-  right: 0;
   align-items: center;
   justify-content: space-between;
   background-color: var(--clr-primary);
@@ -139,7 +139,7 @@ button {
 .section-home {
   flex-direction: column;
   align-items: center;
-  padding-block: 5rem;
+  padding-top: var(--scroll-padding);
   height: 100vh;
   /* background-image: url(../images/index.jpg);
   background-repeat: no-repeat;
@@ -230,7 +230,7 @@ button {
 
 .section-carrozados {
   flex-direction: column;
-  padding-block: 5rem;
+  padding-top: var(--scroll-padding);
   min-height: 100vh;
 }
 .carrozados-header {
@@ -337,7 +337,7 @@ button {
 
 .section-accesorios {
   flex-direction: column;
-  padding-block: 5rem;
+  padding-top: var(--scroll-padding);
   min-height: 100vh;
 }
 .accesorios-card-container {
@@ -349,7 +349,7 @@ button {
 
 .section-contacto {
   flex-direction: column;
-  padding-block: 5rem;
+  padding-top: var(--scroll-padding);
   min-height: 100vh;
 }
 .header-contacto {
@@ -408,7 +408,7 @@ button {
   .primary-navigation {
     position: fixed;
     z-index: 10;
-    inset: 5rem 0 0 35%;
+    inset: var(--scroll-padding) 0 0 35%;
     padding: 3rem 1.5rem;
     --gap: 2rem;
     flex-direction: column;
