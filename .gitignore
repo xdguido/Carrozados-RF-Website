@@ -1,4 +1,5 @@
 node_modules
 dist
+dev
 .cache
-navbar_expand
+images
