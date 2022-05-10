@@ -139,6 +139,9 @@ button {
 .right-header {
   --gap: 0;
 }
+.primary-navigation {
+  --gap: 1.2rem;
+}
 
 /* Hero Section */
 
@@ -346,9 +349,17 @@ button {
   padding-top: var(--scroll-padding);
   min-height: 100vh;
 }
+.header-accesorios {
+  padding-left: max(1rem, 6vw);
+}
 .accesorios-card-container {
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .accesorios-card {
+  flex-basis: clamp(14rem, 36vw, 20rem);
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
 }
 
 /* Contacto Section */
