@@ -241,7 +241,7 @@ button {
   justify-content: space-between;
   padding: 1.2rem;
   flex-basis: clamp(16rem, 22vw, 22rem);
-  height: clamp(19rem, 35vw, 35rem);
+  height: clamp(22rem, 38vw, 38rem);
   box-shadow: var(--box-shadow);
   background-size: cover;
   background-repeat: no-repeat;
@@ -409,13 +409,11 @@ button {
 
 /* Support */
 
-/* @supports (backdrop-filter: blur(18px)) {
-  .carrozados-card__bottom,
-  .primary-header {
-    background-color: var(--clr-bg-primary);
+@supports (backdrop-filter: blur(18px)) {
+  .carrozados-card__bottom {
     backdrop-filter: blur(18px);
   }
-} */
+}
 
 /* Media Queries */
 
