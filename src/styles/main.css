@@ -38,6 +38,9 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+main {
+  overflow: hidden;
+}
 h1,
 h2,
 h3,
@@ -123,7 +126,7 @@ button {
 .primary-header {
   z-index: 10;
   position: fixed;
-  padding-inline: 2rem;
+  padding-inline: clamp(1rem, 3vw, 3rem);
   border-bottom: 1px solid var(--clr-secondary);
   height: var(--scroll-padding);
   width: 100vw;
@@ -132,6 +135,9 @@ button {
   align-items: center;
   justify-content: space-between;
   background-color: var(--clr-primary);
+}
+.right-header {
+  --gap: 0;
 }
 
 /* Hero Section */

@@ -98,27 +98,27 @@ btnCampers.addEventListener("click", () => {
   showModal("CAMPERS", "<p>Descripcion de los campers.</p>", [
     {
       leyend: "Camper 1",
-      src: "./images/carrozados/campers/camper.png",
+      src: "./src/images/carrozados/campers/camper.png",
     },
     {
       leyend: "Camper 1",
-      src: "./images/carrozados/campers/camper.png",
+      src: "./src/images/carrozados/campers/camper.png",
     },
     {
       leyend: "Camper 1",
-      src: "./images/carrozados/campers/camper.png",
+      src: "./src/images/carrozados/campers/camper.png",
     },
     {
       leyend: "Camper 1",
-      src: "./images/carrozados/campers/camper.png",
+      src: "./src/images/carrozados/campers/camper.png",
     },
     {
       leyend: "Camper 1",
-      src: "./images/carrozados/campers/camper.png",
+      src: "./src/images/carrozados/campers/camper.png",
     },
     {
       leyend: "Camper 1",
-      src: "./images/carrozados/campers/camper.png",
+      src: "./src/images/carrozados/campers/camper.png",
     },
   ]);
 });
