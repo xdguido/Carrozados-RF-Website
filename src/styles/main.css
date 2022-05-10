@@ -17,6 +17,9 @@
   --clr-secondary: hsl(191, 92%, 5%);
   --clr-accent: hsl(191, 92%, 24%);
 
+  --svg-filter: invert(99%) sepia(47%) saturate(1%) hue-rotate(291deg)
+    brightness(112%) contrast(96%);
+
   --box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
   --scroll-padding: 4.5rem;
 
@@ -136,11 +139,27 @@ button {
   justify-content: space-between;
   background-color: var(--clr-primary);
 }
+.left-header {
+  align-items: center;
+}
 .right-header {
+  align-items: center;
   --gap: 0;
 }
 .primary-navigation {
   --gap: 1.2rem;
+}
+.logo {
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 4rem;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background-color: var(--clr-accent);
+}
+.logo__image {
+  min-width: 6.2rem;
 }
 
 /* Hero Section */
@@ -357,16 +376,23 @@ button {
   justify-content: center;
 }
 .accesorios-card {
+  flex-direction: column;
   flex-basis: clamp(14rem, 36vw, 20rem);
   box-shadow: var(--box-shadow);
   cursor: pointer;
+  --gap: 0;
+}
+.accesorios-card__bottom {
+  padding: 0.8rem;
+  font-size: var(--step--1);
+  text-align: center;
 }
 
 /* Contacto Section */
 
 .section-contacto {
   flex-direction: column;
-  padding-top: var(--scroll-padding);
+  padding-block: var(--scroll-padding);
   min-height: 100vh;
 }
 .header-contacto {
@@ -406,6 +432,19 @@ button {
   flex-direction: column;
   gap: 0.1rem;
   justify-content: space-between;
+}
+
+/* Footer */
+.footer {
+  padding: 2rem;
+  justify-content: space-between;
+  font-size: var(--step--1);
+  background-color: var(--clr-secondary);
+  color: var(--clr-text);
+  min-height: 8rem;
+}
+.footer__socials-logos {
+  filter: var(--svg-filter);
 }
 
 /* Support */
