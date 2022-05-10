@@ -256,16 +256,16 @@ button {
   background-color: var(--clr-bg-primary);
 }
 .carrozados-card.campers {
-  background-image: url(../images/carrozados/motor-home/motor-home-3.jpeg);
+  background-image: url(../images/carrozados/motor-home/motor-home-3.webp);
 }
 .carrozados-card.motor-home {
-  background-image: url(../images/carrozados/motor-home/motor-home-3.jpeg);
+  background-image: url(../images/carrozados/motor-home/motor-home-3.webp);
 }
 .carrozados-card.taller {
-  background-image: url(../images/carrozados/motor-home/motor-home-3.jpeg);
+  background-image: url(../images/carrozados/motor-home/motor-home-3.webp);
 }
 .carrozados-card.foodtruck {
-  background-image: url(../images/carrozados/motor-home/motor-home-3.jpeg);
+  background-image: url(../images/carrozados/motor-home/motor-home-3.webp);
 }
 
 /* Carrozados Modal */
