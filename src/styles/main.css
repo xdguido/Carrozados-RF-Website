@@ -94,7 +94,7 @@ button {
   font-size: var(--step--1);
 }
 .btn__card {
-  font-size: var(--step--1);
+  font-size: var(--step--2);
   padding: 0.2em 0.8em;
   margin-left: auto;
   color: var(--clr-secondary);
@@ -169,43 +169,10 @@ button {
   align-items: center;
   padding-top: var(--scroll-padding);
   height: 100vh;
-  /* background-image: url(../images/index.jpg);
-  background-repeat: no-repeat;
-  background-size: cover; */
 }
+
 /* Hero Carousel */
-/* .carousel-container {
-  height: 30vw;
-  width: 50vw;
-  margin-inline: auto;
-}
-.carousel {
-  justify-content: flex-start;
-  width: 100%;
-  height: 100%;
-  border: solid 1px var(--clr-accent);
-  overflow: hidden;
-}
-.slider {
-  
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  --gap: 0;
-  height: 100%;
-  width: 600%;
-  transition: transform 400ms;
-}
-.slider section {
-  flex-basis: 50vw;
-  border: solid 1px black;
-  flex-shrink: 0;
-  flex: 1;
-}
-.arrow {
-  cursor: pointer;
-  z-index: 999;
-} */
+
 .carousel-container {
   width: clamp(18rem, 60vw, 60rem);
   height: clamp(13rem, 50vh, 45rem);
@@ -284,14 +251,10 @@ button {
   flex-direction: column;
   --gap: 0.2rem;
   padding: 0.5rem;
-
   font-size: var(--step--1);
   color: var(--clr-secondary);
   background-color: var(--clr-bg-primary);
 }
-/* .carrozados-card__bottom p {
-  border-bottom: solid 1px var(--clr-accent);
-} */
 .carrozados-card.campers {
   background-image: url(../images/carrozados/motor-home/motor-home-3.jpeg);
 }
@@ -341,9 +304,6 @@ button {
   margin-block-end: min(5vw, 2rem);
 }
 .modal__bottom {
-  /* display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr 1fr 1fr; */
   flex-wrap: wrap;
   justify-content: center;
   padding: 0.5rem;
@@ -450,7 +410,7 @@ button {
 /* Support */
 
 /* @supports (backdrop-filter: blur(18px)) {
-  .card__bottom,
+  .carrozados-card__bottom,
   .primary-header {
     background-color: var(--clr-bg-primary);
     backdrop-filter: blur(18px);
@@ -472,11 +432,6 @@ button {
     transition: transform 300ms ease-in-out;
     background-color: var(--clr-primary);
   }
-  /* @supports (backdrop-filter: blur(18px)) {
-    .primary-navigation {
-      backdrop-filter: blur(18px);
-    }
-  } */
   .primary-navigation[data-visible="true"] {
     transform: translateX(0%);
   }
@@ -488,8 +443,6 @@ button {
     align-items: center;
     gap: 0.5rem;
   }
-  /* hero */
-  /* carrozados */
   /* contacto */
   .contacto-container {
     flex-direction: column;
