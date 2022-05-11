@@ -58,14 +58,14 @@ const showModal = (titleHtml, contentHtml, images) => {
   }
 
   document.body.appendChild(modal);
-  document.body.style.overflow = "hidden";
+  document.body.style.overflowY = "hidden";
 
   // Cerrar modal.
   modal.querySelector(".modal__close").addEventListener(
     "click",
     () => {
       document.body.removeChild(modal);
-      document.body.style.overflow = "scroll";
+      document.body.style.overflowY = "scroll";
     },
     true
   );
@@ -74,7 +74,7 @@ const showModal = (titleHtml, contentHtml, images) => {
     (e) => {
       if (e.key === "Escape") {
         document.body.removeChild(modal);
-        document.body.style.overflow = "scroll";
+        document.body.style.overflowY = "scroll";
       }
     },
     true
@@ -82,7 +82,7 @@ const showModal = (titleHtml, contentHtml, images) => {
   window.addEventListener("click", (e) => {
     if (e.target == modal) {
       document.body.removeChild(modal);
-      document.body.style.overflow = "scroll";
+      document.body.style.overflowY = "scroll";
     }
   });
 };

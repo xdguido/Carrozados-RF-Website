@@ -299,6 +299,7 @@ button {
 }
 .modal__top {
   justify-content: space-between;
+  align-items: center;
 }
 .modal__content {
   margin-block-end: min(5vw, 2rem);
