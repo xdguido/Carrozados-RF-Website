@@ -58,7 +58,10 @@ const showModal = (titleHtml, contentHtml, images) => {
   }
 
   document.body.appendChild(modal);
-  document.body.style.overflowY = "hidden";
+  setTimeout(() => {
+    modal.style.opacity = "1";
+    document.body.style.overflowY = "hidden";
+  });
 
   // Cerrar modal.
   modal.querySelector(".modal__close").addEventListener(

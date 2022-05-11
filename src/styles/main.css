@@ -35,7 +35,6 @@ html {
   font-size: var(--step-0);
   scroll-snap-type: y proximity;
   scroll-behavior: smooth;
-  /* overflow-x: hidden; */
 }
 body {
   overflow-y: scroll;
@@ -284,6 +283,8 @@ button {
 }
 .modal {
   z-index: 11;
+  opacity: 0;
+  transition: opacity 100ms ease-in-out;
 }
 .modal__lightbox {
   z-index: 12;
