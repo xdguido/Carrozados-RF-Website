@@ -74,6 +74,20 @@ slider.addEventListener(
   false
 );
 
+// Esconder boton de Contacto en seccion Contacto.
+
+const contacto = document.querySelector("#contacto");
+const btnContacto = document.querySelector(".btn-contact");
+
+window.addEventListener("scroll", () => {
+  if (contacto.getBoundingClientRect().top < 30) {
+    btnContacto.style.display = "none";
+  }
+  if (contacto.getBoundingClientRect().top > 30) {
+    btnContacto.style.display = "flex";
+  }
+});
+
 // Menu desplegable.
 
 // if (box.getBoundingClientRect().top < window.innerHeight)
