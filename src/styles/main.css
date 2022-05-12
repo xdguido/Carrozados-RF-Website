@@ -93,12 +93,15 @@ button {
   font-size: var(--step--1);
 }
 .btn__card {
+  align-items: center;
+  justify-content: space-between;
   font-size: var(--step--2);
-  padding: 0.2em 0.8em;
+  font-weight: 500;
+  padding: 0.4em 1em;
   margin-left: auto;
   color: var(--clr-secondary);
-  background-color: transparent;
-  border: solid 1.2px;
+  background-color: var(--clr-bg-primary);
+  border: none;
   border-radius: 1rem;
 }
 .modal__close {
@@ -112,11 +115,12 @@ button {
 .btn__form,
 .btn-whatsapp {
   padding: 0.3em 0.8em;
-  border: solid 1.2px var(--clr-accent);
+  border: none;
   border-radius: 1rem;
-  /* font-size: var(--step--2); */
-  color: var(--clr-accent);
-  background-color: var(--clr-text);
+  font-size: var(--step--1);
+  font-weight: 500;
+  color: var(--clr-text);
+  background-color: var(--clr-accent);
   margin-left: auto;
   align-items: center;
   justify-content: center;
@@ -129,7 +133,8 @@ button {
   z-index: 10;
   position: fixed;
   padding-inline: clamp(1rem, 3vw, 3rem);
-  border-bottom: 1px solid var(--clr-secondary);
+  /* border-bottom: 1px solid var(--clr-secondary); */
+  box-shadow: var(--box-shadow);
   height: var(--scroll-padding);
   width: 100vw;
   top: 0;
@@ -252,7 +257,7 @@ button {
   padding: 0.5rem;
   font-size: var(--step--1);
   color: var(--clr-secondary);
-  background-color: var(--clr-bg-primary);
+  /* background-color: var(--clr-bg-primary); */
 }
 .carrozados-card.campers {
   background-image: url(../images/carrozados/motor-home/motor-home-3.webp);
@@ -370,12 +375,17 @@ button {
   padding: clamp(1rem, 2vw, 2rem);
   max-width: 26rem;
   box-shadow: var(--box-shadow);
+  background-color: var(--clr-primary);
+}
+input,
+textarea {
+  background-color: inherit;
+  border-radius: 0.2rem;
 }
 .contacto__top,
 .contacto__form-container {
   flex-direction: column;
   padding-bottom: 0.5rem;
-  border-bottom: solid 1.2px var(--clr-accent);
 }
 .contacto__top {
   --gap: 0.5rem;
@@ -412,7 +422,7 @@ button {
 /* Support */
 
 @supports (backdrop-filter: blur(18px)) {
-  .carrozados-card__bottom {
+  .btn__card {
     backdrop-filter: blur(18px);
   }
 }
