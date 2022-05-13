@@ -1,6 +1,7 @@
-// const addMultipleEventListener = (element, events, handler) => {
-//   events.forEach((e) => element.addEventListener(e, handler));
-// };
+const btnCampers = document.querySelector("#btn-campers");
+const btnMotorhome = document.querySelector("#btn-motorhome");
+const btnTaller = document.querySelector("#btn-taller");
+const btnRemolques = document.querySelector("#btn-remolques");
 
 const showModal = (titleHtml, contentHtml, images) => {
   const modal = document.createElement("div");
@@ -91,11 +92,6 @@ const showModal = (titleHtml, contentHtml, images) => {
 };
 
 // Carrozados Modal.
-
-const btnCampers = document.querySelector("#btn-campers");
-const btnMotorhome = document.querySelector("#btn-motorhome");
-const btnTaller = document.querySelector("#btn-taller");
-const btnRemolques = document.querySelector("#btn-remolques");
 
 btnCampers.addEventListener("click", () => {
   showModal("CAMPERS", "<p>Descripcion de los campers.</p>", [

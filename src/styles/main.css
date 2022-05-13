@@ -117,7 +117,7 @@ button {
   padding: 0.3em 0.8em;
   border: none;
   border-radius: 1rem;
-  font-size: var(--step--1);
+  font-size: var(--step--2);
   font-weight: 500;
   color: var(--clr-text);
   background-color: var(--clr-accent);
@@ -151,6 +151,7 @@ button {
   --gap: 0;
 }
 .primary-navigation {
+  font-size: var(--step--1);
   --gap: 1.2rem;
 }
 .logo {
@@ -164,6 +165,9 @@ button {
 }
 .logo__image {
   min-width: 6.2rem;
+}
+nav > ul > li > a:hover {
+  color: var(--clr-accent);
 }
 
 /* Hero Section */
@@ -382,6 +386,9 @@ textarea {
   background-color: inherit;
   border-radius: 0.2rem;
 }
+.contacto__form > div > input {
+  padding: 0.2rem;
+}
 .contacto__top,
 .contacto__form-container {
   flex-direction: column;
@@ -391,7 +398,7 @@ textarea {
   --gap: 0.5rem;
 }
 .iframe-googlemaps {
-  width: clamp(18rem, 50vw, 45rem);
+  width: clamp(18rem, 50vw, 40rem);
   height: clamp(20rem, 50vw, 30rem);
   box-shadow: var(--box-shadow);
 }
@@ -480,4 +487,8 @@ textarea {
 
 .scroll-snap {
   scroll-snap-align: start;
+}
+
+.hidden {
+  transform: translateX(1000%);
 }

@@ -1,9 +1,16 @@
-// import { showModal } from "./modal";
-
-// Mobile Nav Bar.
-
 const primaryNav = document.querySelector(".primary-navigation");
 const navToggle = document.querySelector(".btn-mobile-nav-toggle");
+const home = document.querySelector("#home");
+const carrozados = document.querySelector("#carrozados");
+const accesorios = document.querySelector("#accesorios");
+const contacto = document.querySelector("#contacto");
+const btnContacto = document.querySelector(".btn-contact");
+const carousel = document.querySelector(".carousel");
+const slider = document.querySelector(".slider");
+const next = document.querySelector(".next");
+const prev = document.querySelector(".prev");
+
+// Mobile Nav Bar.
 
 navToggle.addEventListener("click", () => {
   const visibility = primaryNav.getAttribute("data-visible");
@@ -32,11 +39,6 @@ navToggle.addEventListener("click", () => {
 
 // Hero Carousel.
 
-const carousel = document.querySelector(".carousel");
-const slider = document.querySelector(".slider");
-
-const next = document.querySelector(".next");
-const prev = document.querySelector(".prev");
 let direction;
 
 next.addEventListener("click", () => {
@@ -76,68 +78,13 @@ slider.addEventListener(
 
 // Esconder boton de Contacto en seccion Contacto.
 
-const contacto = document.querySelector("#contacto");
-const btnContacto = document.querySelector(".btn-contact");
-
 window.addEventListener("scroll", () => {
   if (contacto.getBoundingClientRect().top < 30) {
-    btnContacto.style.display = "none";
+    btnContacto.classList.add("hidden");
   }
   if (contacto.getBoundingClientRect().top > 30) {
-    btnContacto.style.display = "flex";
+    btnContacto.classList.remove("hidden");
   }
 });
 
-// Menu desplegable.
-
-// if (box.getBoundingClientRect().top < window.innerHeight)
-
-// window.addEventListener("scroll", () => {
-//   console.log(window.innerHeight);
-//   console.log(sectionCarrozados.getBoundingClientRect().bottom);
-//   console.log(getElemDistance(sectionCarrozados));
-// });
-
-// const btnCampers = document.querySelector("#btn-campers");
-// const btnMotorhome = document.querySelector("#btn-motorhome");
-// const btnTaller = document.querySelector("#btn-taller");
-// const btnRemolques = document.querySelector("#btn-remolques");
-
-// const cardCampers = document.querySelector("#card-campers");
-// const cardMotorhome = document.querySelector("#card-motorhome");
-// const cardTaller = document.querySelector("#card-taller");
-// const cardRemolques = document.querySelector("#card-remolques");
-
-// const sectionCarrozados = document.querySelector("#carrozados");
-
-// const scrollAuto = () => {
-//   window.scrollBy(0, sectionCarrozados.getBoundingClientRect().bottom);
-// };
-
-// const resetCards = () => {
-//   document.querySelectorAll(".card-details__content").forEach((card) => {
-//     card.classList.remove("card-details__content--active");
-//   });
-// };
-
-// document.querySelectorAll(".btn__card").forEach((button) => {
-//   button.addEventListener("click", (e) => {
-//     resetCards();
-//     if (e.target.id === "btn-campers") {
-//       cardCampers.classList.add("card-details__content--active");
-//       scrollAuto();
-//     }
-//     if (e.target.id === "btn-motorhome") {
-//       cardMotorhome.classList.add("card-details__content--active");
-//       scrollAuto();
-//     }
-//     if (e.target.id === "btn-taller") {
-//       cardTaller.classList.add("card-details__content--active");
-//       scrollAuto();
-//     }
-//     if (e.target.id === "btn-remolques") {
-//       cardRemolques.classList.add("card-details__content--active");
-//       scrollAuto();
-//     }
-//   });
-// });
+// Pintar links del Header.
