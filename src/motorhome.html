@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./styles/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/main.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/motorhome.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Motor-Homes - Carrozados-RF</title>
+  </head>
+  <body>
+    <header class="primary-header flex">
+      <div class="left-header flex">
+        <div class="logo flex">
+          <img
+            src="./images/logos/carrozados blanco.webp"
+            alt="logo"
+            class="logo__image"
+            onclick="window.location.href='../index.html/#home';"
+          />
+        </div>
+
+        <button
+          onclick="window.location.href='../index.html/#contacto';"
+          class="btn-contact"
+        >
+          CONTACTANOS <span class="material-icons">phone</span>
+        </button>
+      </div>
+
+      <div class="right-header flex">
+        <button
+          class="btn-mobile-nav-toggle material-icons md-36"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          menu
+        </button>
+
+        <nav>
+          <ul
+            id="primary-navigation"
+            data-visible="false"
+            class="primary-navigation flex"
+          >
+            <li><a href="../index.html/#home">INICIO</a></li>
+            <li><a href="../index.html/#carrozados">CARROZADOS</a></li>
+            <li><a href="">ACCESORIOS</a></li>
+            <li><a href="">NOSOTROS</a></li>
+            <li><a href="../index.html/#contacto">CONTACTO</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="motor-home-section flex">
+        <h1 class="motor-home-header header-padding">Motor-Home</h1>
+        <div class="baner flex">
+          <img
+            src="./images/carrozados/motor-home/motor-home-baner.webp"
+            alt="imagen de motor-home"
+            class="baner__image"
+          />
+        </div>
+        <section class="motor-home-details flex">
+          <ul class="motor-home-details__nav flex">
+            <li class="flex">
+              <img src="" alt="" />
+              <p>Texto</p>
+            </li>
+            <li class="flex">
+              <img src="" alt="" />
+              <p>Texto</p>
+            </li>
+            <li class="flex">
+              <img src="" alt="" />
+              <p>Texto</p>
+            </li>
+            <li class="flex">
+              <img src="" alt="" />
+              <p>Texto</p>
+            </li>
+          </ul>
+        </section>
+        <section class="motor-home-content grid">
+          <div class="motor-home-content__image-container flex">
+            <img
+              src="./images/carrozados/motor-home/motor-home-4.webp"
+              alt="Foto 1"
+              class="motor-home-content__image"
+            />
+          </div>
+          <p class="motor-home-content__text flex">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quis
+            eaque est hic deserunt, delectus enim qui sunt eos, ducimus in
+            reprehenderit molestiae itaque deleniti quos dicta soluta illum
+            necessitatibus.
+          </p>
+
+          <div class="motor-home-content__image-container flex">
+            <img
+              src="./images/carrozados/motor-home/motor-home-5.webp"
+              alt="Foto 2"
+              class="motor-home-content__image"
+            />
+          </div>
+          <p class="motor-home-content__text flex">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+            consequatur voluptatum repellendus! Ut error cupiditate ab quas
+            voluptatum odio iste odit quasi aspernatur suscipit, impedit
+            consequatur doloribus totam praesentium laborum!
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer flex">
+      <div class="footer__left flex">
+        <p class="footer__content">Carrozados - RF</p>
+      </div>
+      <div class="footer__right flex">
+        <ul class="footer__socials flex">
+          <li>
+            <a href=""
+              ><img
+                src="./images/icons/facebook.svg"
+                alt="facebook"
+                class="footer__socials-logos"
+            /></a>
+          </li>
+          <li>
+            <a href=""
+              ><img
+                src="./images/icons/instagram.svg"
+                alt="instagram"
+                class="footer__socials-logos"
+            /></a>
+          </li>
+          <li>
+            <a href=""
+              ><img
+                src="./images/icons/youtube.svg"
+                alt="youtube"
+                class="footer__socials-logos"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/modal.js"></script>
+  </body>
+</html>

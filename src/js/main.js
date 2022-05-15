@@ -10,6 +10,11 @@ const slider = document.querySelector(".slider");
 const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
 
+const btnCampers = document.querySelector("#btn-campers");
+const btnMotorhome = document.querySelector("#btn-motorhome");
+const btnTaller = document.querySelector("#btn-taller");
+const btnRemolques = document.querySelector("#btn-remolques");
+
 // Mobile Nav Bar.
 
 navToggle.addEventListener("click", () => {
@@ -87,4 +92,14 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Pintar links del Header.
+//
+
+btnCampers.addEventListener("click", () => {
+  window.location.href = "./src/campers.html";
+});
+btnMotorhome.addEventListener("click", () => {
+  window.location.href = "./src/motorhome.html";
+});
+btnTaller.addEventListener("click", () => {
+  window.location.href = "./src/taller.html";
+});

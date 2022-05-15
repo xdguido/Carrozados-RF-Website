@@ -1,8 +1,3 @@
-const btnCampers = document.querySelector("#btn-campers");
-const btnMotorhome = document.querySelector("#btn-motorhome");
-const btnTaller = document.querySelector("#btn-taller");
-const btnRemolques = document.querySelector("#btn-remolques");
-
 const showModal = (titleHtml, contentHtml, images) => {
   const modal = document.createElement("div");
 
@@ -93,33 +88,33 @@ const showModal = (titleHtml, contentHtml, images) => {
 
 // Carrozados Modal.
 
-btnCampers.addEventListener("click", () => {
-  showModal("CAMPERS", "<p>Descripcion de los campers.</p>", [
-    {
-      leyend: "Camper 1",
-      src: "./src/images/carrozados/campers/camper.webp",
-    },
-    {
-      leyend: "Camper 1",
-      src: "./src/images/carrozados/campers/camper.webp",
-    },
-    {
-      leyend: "Camper 1",
-      src: "./src/images/carrozados/campers/camper.webp",
-    },
-    {
-      leyend: "Camper 1",
-      src: "./src/images/carrozados/campers/camper.webp",
-    },
-    {
-      leyend: "Camper 1",
-      src: "./src/images/carrozados/campers/camper.webp",
-    },
-    {
-      leyend: "Camper 1",
-      src: "./src/images/carrozados/campers/camper.webp",
-    },
-  ]);
-});
+// btnCampers.addEventListener("click", () => {
+//   showModal("CAMPERS", "<p>Descripcion de los campers.</p>", [
+//     {
+//       leyend: "Camper 1",
+//       src: "./src/images/carrozados/campers/camper.webp",
+//     },
+//     {
+//       leyend: "Camper 1",
+//       src: "./src/images/carrozados/campers/camper.webp",
+//     },
+//     {
+//       leyend: "Camper 1",
+//       src: "./src/images/carrozados/campers/camper.webp",
+//     },
+//     {
+//       leyend: "Camper 1",
+//       src: "./src/images/carrozados/campers/camper.webp",
+//     },
+//     {
+//       leyend: "Camper 1",
+//       src: "./src/images/carrozados/campers/camper.webp",
+//     },
+//     {
+//       leyend: "Camper 1",
+//       src: "./src/images/carrozados/campers/camper.webp",
+//     },
+//   ]);
+// });
 
 // export { showModal };
