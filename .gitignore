@@ -3,3 +3,4 @@ dist
 dev
 recursos
 .cache
+.env

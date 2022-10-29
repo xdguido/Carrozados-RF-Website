@@ -1,3 +1,6 @@
+import "./sass/main.scss";
+import "./components/modal.js";
+
 const primaryNav = document.querySelector(".primary-navigation");
 const navToggle = document.querySelector(".btn-mobile-nav-toggle");
 const home = document.querySelector("#home");

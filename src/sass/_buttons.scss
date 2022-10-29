@@ -1,0 +1,68 @@
+button {
+  cursor: pointer;
+  color: inherit;
+}
+.btn-mobile-nav-toggle.material-icons {
+  display: none;
+  font-size: 43px;
+  color: $clr-secondary;
+  z-index: 9999;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 2.5rem;
+  border: 0;
+  width: 2.7rem;
+  aspect-ratio: 1;
+}
+.btn__hero,
+.btn-contact {
+  align-items: center;
+  border-radius: 2rem;
+  border-style: none;
+  font-weight: 500;
+  color: $clr-text;
+  background-color: $clr-accent;
+}
+.btn__hero {
+  padding: 0.5em 1em;
+  --gap: 0.5rem;
+}
+.btn-contact {
+  display: none;
+  padding: 0.4em 0.8em;
+  font-size: $step--1;
+}
+.btn__card {
+  align-items: center;
+  justify-content: space-between;
+  font-size: $step--2;
+  font-weight: 500;
+  padding: 0.4em 1em;
+  margin-left: auto;
+  color: $clr-secondary;
+  background-color: $clr-bg-primary;
+  border: none;
+  border-radius: 1rem;
+}
+.modal__close {
+  background-color: transparent;
+  border-style: none;
+  font-size: 25px;
+}
+.modal__close.material-icons {
+  font-size: 40px;
+}
+.btn__form,
+.btn-whatsapp {
+  padding: 0.3em 0.8em;
+  border: none;
+  border-radius: 1rem;
+  font-size: $step--2;
+  font-weight: 500;
+  color: $clr-text;
+  background-color: $clr-accent;
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+  --gap: 0.5rem;
+}

@@ -1,0 +1,14 @@
+.footer {
+  padding: 2rem;
+  justify-content: space-between;
+  font-size: $step--1;
+  background-color: $clr-secondary;
+  color: $clr-text;
+  min-height: 7rem;
+}
+.footer__socials-logos {
+  filter: $svg-filter;
+}
+.footer__content {
+  font-weight: 500;
+}

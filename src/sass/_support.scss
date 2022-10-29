@@ -1,0 +1,5 @@
+@supports (backdrop-filter: blur(18px)) {
+  .btn__card {
+    backdrop-filter: blur(18px);
+  }
+}

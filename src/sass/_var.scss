@@ -1,0 +1,22 @@
+$step--2: clamp(0.74rem, calc(0.76rem + -0.04vw), 0.76rem);
+$step--1: clamp(0.91rem, calc(0.9rem + 0.03vw), 0.92rem);
+$step-0: clamp(1.09rem, calc(1.06rem + 0.12vw), 1.15rem);
+$step-1: clamp(1.31rem, calc(1.25rem + 0.26vw), 1.44rem);
+$step-2: clamp(1.57rem, calc(1.48rem + 0.45vw), 1.8rem);
+$step-3: clamp(1.88rem, calc(1.74rem + 0.72vw), 2.25rem);
+
+$clr-bg-primary: hsl(0, 0%, 100%, 0.55);
+$clr-bg-secondary: hsl(0, 0%, 0%, 0.75);
+$clr-text: hsl(0, 0%, 98%);
+$clr-primary: hsl(0, 0%, 92%);
+$clr-secondary: hsl(191, 92%, 5%);
+$clr-accent: hsl(191, 92%, 24%);
+
+$svg-filter: invert(99%) sepia(47%) saturate(1%) hue-rotate(291deg)
+  brightness(112%) contrast(96%);
+
+$box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+$scroll-padding: 4.5rem;
+
+$ff-title: "Montserrat", sans-serif;
+$ff-text: "Montserrat", sans-serif;

@@ -1,0 +1,39 @@
+.primary-header {
+  z-index: 10;
+  position: fixed;
+  padding-inline: clamp(1rem, 3vw, 3rem);
+  box-shadow: $box-shadow;
+  height: $scroll-padding;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $clr-primary;
+}
+.left-header {
+  align-items: center;
+}
+.right-header {
+  align-items: center;
+  --gap: 0;
+}
+.primary-navigation {
+  font-size: $step--1;
+  --gap: 1.2rem;
+}
+.logo {
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 4rem;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background-color: $clr-accent;
+}
+.logo__image {
+  min-width: 6.2rem;
+}
+nav > ul > li > a:hover {
+  color: $clr-accent;
+}

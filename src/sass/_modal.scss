@@ -1,0 +1,53 @@
+.modal,
+.modal__lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+.modal {
+  z-index: 11;
+  opacity: 0;
+  transition: opacity 100ms ease-in-out;
+}
+.modal__lightbox {
+  z-index: 12;
+}
+.modal__inner {
+  flex-direction: column;
+  background-color: $clr-primary;
+  color: $clr-secondary;
+  border-radius: 1rem;
+  padding: min(5vw, 2.5rem);
+  width: min(90vw, 70rem);
+  height: 85vh;
+}
+.modal__top {
+  justify-content: space-between;
+  align-items: center;
+}
+.modal__content {
+  margin-block-end: min(5vw, 2rem);
+}
+.modal__bottom {
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.5rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.modal__card-container {
+  flex-basis: clamp(14rem, 36vw, 20rem);
+  box-shadow: $box-shadow;
+  cursor: pointer;
+}
+.modal__card-container > p {
+  padding: 0.8rem;
+  font-size: $step--1;
+  text-align: center;
+}

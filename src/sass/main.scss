@@ -1,0 +1,242 @@
+@import "normalize";
+@import "var";
+@import "buttons";
+@import "header";
+@import "footer";
+@import "modal";
+@import "utils";
+
+//scss
+
+html {
+  font-family: var(--ff-text);
+  color: var(--clr-secondary);
+  font-size: var(--step-0);
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+  line-height: 1.2;
+}
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+main {
+  overflow: hidden;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: $ff-title;
+}
+h1 {
+  font-size: $step-3;
+  font-weight: 600;
+}
+h2 {
+  font-size: $step-1;
+}
+
+/* Hero Section */
+
+.section-home {
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Hero Carousel */
+
+.carousel-container {
+  width: clamp(18rem, 60vw, 60rem);
+  height: clamp(13rem, 50vh, 45rem);
+  margin: 20px auto;
+}
+.carousel {
+  background: #fff;
+  border: 2px solid $clr-accent;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+}
+.slider {
+  height: 100%;
+  width: 500%;
+  flex-shrink: 0;
+  transition: transform 500ms ease-in-out;
+}
+.slider > section {
+  flex-basis: 20%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.controls button.next {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: none;
+  border: none;
+  outline: none;
+}
+.controls button.prev {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  background: none;
+  border: none;
+  outline: none;
+}
+.controls button i {
+  font-size: 50px;
+}
+
+/* Carrozados Section */
+
+.section-carrozados {
+  flex-direction: column;
+  min-height: 100vh;
+  --gap: 0;
+}
+.carrozados-card-container {
+  --gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.carrozados-card {
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.2rem;
+  flex-basis: clamp(16rem, 22vw, 22rem);
+  height: clamp(22rem, 38vw, 33rem);
+  box-shadow: $box-shadow;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.carrozados-card__bottom {
+  flex-direction: column;
+  --gap: 0.2rem;
+  padding: 0.5rem;
+  font-size: $step--1;
+  color: $clr-secondary;
+  /* background-color: var(--clr-bg-primary); */
+}
+.carrozados-card.campers {
+  background-image: url(../images/carrozados/motor-home/motor-home-3.webp);
+}
+.carrozados-card.motor-home {
+  background-image: url(../images/carrozados/motor-home/motor-home-3.webp);
+}
+.carrozados-card.taller {
+  background-image: url(../images/carrozados/motor-home/motor-home-3.webp);
+}
+.carrozados-card.foodtruck {
+  background-image: url(../images/carrozados/motor-home/motor-home-3.webp);
+}
+
+/* Acerca de Nosotros */
+
+.nosotros-header::before {
+  content: "Conoce nuestra";
+  display: block;
+  font-size: $step--1;
+  font-weight: 300;
+  color: $clr-bg-secondary;
+}
+.section-nosotros {
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+.nosotros-content {
+  padding-inline: min(10vw, 10rem);
+  max-width: 90rem;
+  gap: 4rem;
+}
+.nosotros-content__image-container {
+  justify-content: center;
+  align-items: end;
+  height: 20rem;
+  overflow: hidden;
+}
+.nosotros-content__image {
+  min-width: 40px;
+  min-height: 100%;
+  object-fit: cover;
+}
+.nosotros-content__text {
+  align-items: center;
+  color: $clr-bg-secondary;
+  font-size: $step-0;
+  font-weight: 300;
+}
+/* Contacto Section */
+
+.section-contacto {
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $clr-primary;
+  --gap: 0;
+}
+.contacto-header::before {
+  content: "";
+  display: block;
+  font-size: $step--1;
+  font-weight: 300;
+  color: $clr-bg-secondary;
+}
+.contacto-container {
+  justify-content: center;
+  font-size: $step--1;
+  --gap: 2rem;
+}
+.contacto__content {
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(1rem, 2vw, 2rem);
+  width: clamp(20rem, 22vw, 24rem);
+  box-shadow: $box-shadow;
+  background-color: $clr-bg-primary;
+  color: $clr-bg-secondary;
+}
+input,
+textarea {
+  background-color: inherit;
+  border-radius: 0.2rem;
+  /* border: solid 1px var(--clr-secondary); */
+}
+.contacto__top,
+.contacto__form-container {
+  flex-direction: column;
+  padding-bottom: 0.5rem;
+}
+.contacto__top {
+  --gap: 1rem;
+}
+.iframe-googlemaps {
+  width: clamp(18rem, 50vw, 40rem);
+  min-height: 20rem;
+  box-shadow: $box-shadow;
+}
+.contacto__form {
+  flex-direction: column;
+  font-weight: 600;
+  --gap: 1rem;
+}
+.contacto__form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  justify-content: space-between;
+}
+.contacto__form > div > input {
+  padding: 0.2rem;
+}
+
+@import "support";
+@import "media";

@@ -1,0 +1,46 @@
+@media (min-width: 801px) {
+  .nosotros-content__text:last-child {
+    grid-row-start: 2;
+  }
+  .nosotros-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .motor-home-content__text:last-child {
+    grid-row-start: 2;
+  }
+  .motor-home-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  /* nav bar */
+  .primary-navigation {
+    position: fixed;
+    z-index: 10;
+    inset: $scroll-padding 0 0 35%;
+    padding: 3rem 1.5rem;
+    --gap: 2rem;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 300ms ease-in-out;
+    background-color: $clr-primary;
+  }
+  .primary-navigation[data-visible="true"] {
+    transform: translateX(0%);
+  }
+  .btn-mobile-nav-toggle.material-icons {
+    display: block;
+  }
+  .btn-contact {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  /* contacto */
+  .contacto-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
